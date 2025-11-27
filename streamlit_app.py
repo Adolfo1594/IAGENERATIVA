@@ -18,18 +18,10 @@ st.title("📊 Predicción de Demanda Educativa con Gemini 2.5")
 st.write("Sube tu dataset y genera proyecciones inteligentes.")
 
 
-# ================================================================
-# 1. CONFIGURAR API KEY
-# ================================================================
-
-st.subheader("🔐 Configurar API Key")
-
-api_key = st.text_input("Ingresa tu API Key de Gemini:", type="password")
-
-if api_key:
-    genai.configure(api_key=api_key)
-else:
-    st.warning("Por favor ingresa tu API Key antes de continuar.")
+# ============================
+# 1. CONFIGURAR GEMINI API KEY
+# ============================
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 
 # ================================================================
