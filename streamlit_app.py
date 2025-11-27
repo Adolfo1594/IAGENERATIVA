@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
+from dotenv import load_dotenv
 import os
 
 # ================================================================
