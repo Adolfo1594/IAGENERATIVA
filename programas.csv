@@ -1,0 +1,211 @@
+programa,año,inscritos,egresados,campañas_facebook,presupuesto,empleabilidad,demanda_nacional
+Enfermería Nefrológica,2005,136,129,4,257892,0.66,314
+Enfermería Nefrológica,2006,134,127,4,225203,0.65,230
+Enfermería Nefrológica,2007,128,121,3,114925,0.68,291
+Enfermería Nefrológica,2008,130,121,4,274088,0.71,158
+Enfermería Nefrológica,2009,142,140,3,106886,0.97,230
+Enfermería Nefrológica,2010,139,137,4,261110,0.61,188
+Enfermería Nefrológica,2011,151,150,1,257624,0.61,485
+Enfermería Nefrológica,2012,160,154,3,67159,0.61,305
+Enfermería Nefrológica,2013,160,157,1,250551,0.89,489
+Enfermería Nefrológica,2014,156,153,4,226830,0.92,143
+Enfermería Nefrológica,2015,150,141,3,213678,0.95,314
+Enfermería Nefrológica,2016,159,155,4,255137,0.81,379
+Enfermería Nefrológica,2017,167,159,4,101214,0.66,444
+Enfermería Nefrológica,2018,164,156,0,248635,0.71,162
+Enfermería Nefrológica,2019,170,168,0,214231,0.88,388
+Enfermería Nefrológica,2020,167,158,1,154488,0.95,300
+Enfermería Nefrológica,2021,173,172,0,139135,0.74,161
+Enfermería Nefrológica,2022,173,171,3,244407,0.7,134
+Enfermería Nefrológica,2023,172,170,4,189182,0.87,356
+Enfermería Nefrológica,2024,178,169,2,169176,0.87,445
+Enfermería Nefrológica,2025,186,184,0,157059,0.81,487
+Enfermería Quirúrgica,2005,119,116,4,112623,0.83,342
+Enfermería Quirúrgica,2006,112,103,4,223629,0.84,233
+Enfermería Quirúrgica,2007,121,118,2,68047,0.91,447
+Enfermería Quirúrgica,2008,115,115,0,178376,0.85,220
+Enfermería Quirúrgica,2009,127,119,2,286902,0.66,236
+Enfermería Quirúrgica,2010,111,111,2,63545,0.73,414
+Enfermería Quirúrgica,2011,114,111,0,101005,0.97,151
+Enfermería Quirúrgica,2012,115,109,1,270546,0.71,212
+Enfermería Quirúrgica,2013,119,119,1,284113,0.76,442
+Enfermería Quirúrgica,2014,106,106,0,227789,0.66,271
+Enfermería Quirúrgica,2015,106,100,3,233734,0.89,222
+Enfermería Quirúrgica,2016,116,111,4,233155,0.97,494
+Enfermería Quirúrgica,2017,114,114,0,223179,0.79,448
+Enfermería Quirúrgica,2018,99,96,3,106250,0.68,445
+Enfermería Quirúrgica,2019,98,96,3,183983,0.64,227
+Enfermería Quirúrgica,2020,101,100,0,182874,0.73,250
+Enfermería Quirúrgica,2021,103,101,3,170975,0.91,159
+Enfermería Quirúrgica,2022,109,108,0,153727,0.97,136
+Enfermería Quirúrgica,2023,100,92,2,223714,0.88,230
+Enfermería Quirúrgica,2024,109,102,0,62183,0.92,212
+Enfermería Quirúrgica,2025,96,93,3,229426,0.74,198
+Urgencias y Emergencias,2005,57,56,1,52869,0.77,268
+Urgencias y Emergencias,2006,45,45,3,73328,0.79,403
+Urgencias y Emergencias,2007,59,52,2,136416,0.72,275
+Urgencias y Emergencias,2008,49,47,4,255362,0.94,382
+Urgencias y Emergencias,2009,37,33,0,220862,0.79,416
+Urgencias y Emergencias,2010,49,47,3,152946,0.89,116
+Urgencias y Emergencias,2011,43,39,2,213707,0.61,379
+Urgencias y Emergencias,2012,46,42,2,247307,0.92,290
+Urgencias y Emergencias,2013,28,26,1,215656,0.75,153
+Urgencias y Emergencias,2014,28,21,1,122991,0.86,250
+Urgencias y Emergencias,2015,25,16,1,226089,0.88,492
+Urgencias y Emergencias,2016,32,27,4,55801,0.91,454
+Urgencias y Emergencias,2017,37,29,4,269963,0.79,412
+Urgencias y Emergencias,2018,21,18,0,127575,0.87,499
+Urgencias y Emergencias,2019,29,27,3,82097,0.64,314
+Urgencias y Emergencias,2020,32,24,1,230798,0.97,249
+Urgencias y Emergencias,2021,28,25,1,177813,0.72,200
+Urgencias y Emergencias,2022,10,3,4,53051,0.97,202
+Urgencias y Emergencias,2023,11,6,4,239407,0.8,146
+Urgencias y Emergencias,2024,8,3,3,286175,0.97,223
+Urgencias y Emergencias,2025,13,11,0,123847,0.7,191
+Cuidados Intensivos Neonatales,2005,81,72,4,55949,0.92,492
+Cuidados Intensivos Neonatales,2006,86,82,0,116617,0.95,338
+Cuidados Intensivos Neonatales,2007,74,69,0,226615,0.96,484
+Cuidados Intensivos Neonatales,2008,87,81,4,163429,0.88,175
+Cuidados Intensivos Neonatales,2009,85,83,4,253861,0.61,319
+Cuidados Intensivos Neonatales,2010,73,73,3,210196,0.78,317
+Cuidados Intensivos Neonatales,2011,82,78,3,243824,0.78,456
+Cuidados Intensivos Neonatales,2012,75,70,4,147379,0.62,322
+Cuidados Intensivos Neonatales,2013,73,64,2,150793,0.79,424
+Cuidados Intensivos Neonatales,2014,75,72,1,144704,0.93,259
+Cuidados Intensivos Neonatales,2015,80,73,3,253441,0.82,132
+Cuidados Intensivos Neonatales,2016,60,58,2,153691,0.75,267
+Cuidados Intensivos Neonatales,2017,67,66,4,142658,0.83,314
+Cuidados Intensivos Neonatales,2018,73,64,4,164585,0.86,214
+Cuidados Intensivos Neonatales,2019,63,57,3,132745,0.86,174
+Cuidados Intensivos Neonatales,2020,57,49,4,270156,0.71,493
+Cuidados Intensivos Neonatales,2021,56,48,2,164352,0.88,135
+Cuidados Intensivos Neonatales,2022,68,68,4,94811,0.76,112
+Cuidados Intensivos Neonatales,2023,51,43,0,160448,0.79,467
+Cuidados Intensivos Neonatales,2024,59,57,0,129459,0.6,332
+Cuidados Intensivos Neonatales,2025,64,56,3,263709,0.86,151
+Terapia de Infusión,2005,117,113,4,152795,0.72,478
+Terapia de Infusión,2006,105,101,0,51062,0.63,141
+Terapia de Infusión,2007,109,100,4,204786,0.94,334
+Terapia de Infusión,2008,114,113,3,229208,0.89,352
+Terapia de Infusión,2009,110,104,4,231415,0.63,382
+Terapia de Infusión,2010,107,103,4,104693,0.97,464
+Terapia de Infusión,2011,107,102,3,272864,0.96,316
+Terapia de Infusión,2012,120,117,3,216981,0.87,374
+Terapia de Infusión,2013,120,115,2,75289,0.94,138
+Terapia de Infusión,2014,112,111,3,53709,0.62,416
+Terapia de Infusión,2015,119,113,0,89298,0.82,289
+Terapia de Infusión,2016,128,120,0,153333,0.77,157
+Terapia de Infusión,2017,124,120,4,242714,0.95,263
+Terapia de Infusión,2018,116,114,3,291080,0.8,332
+Terapia de Infusión,2019,131,131,4,160133,0.82,243
+Terapia de Infusión,2020,126,117,3,73959,0.84,107
+Terapia de Infusión,2021,120,111,1,155787,0.82,319
+Terapia de Infusión,2022,122,114,3,70159,0.77,244
+Terapia de Infusión,2023,127,127,4,107043,0.83,339
+Terapia de Infusión,2024,132,130,4,226517,0.96,355
+Terapia de Infusión,2025,125,117,1,246617,0.95,341
+Cuidados Intensivos Adulto,2005,128,123,0,150497,0.98,276
+Cuidados Intensivos Adulto,2006,136,132,1,185230,0.75,414
+Cuidados Intensivos Adulto,2007,141,141,1,125880,0.76,484
+Cuidados Intensivos Adulto,2008,139,133,3,199456,0.8,232
+Cuidados Intensivos Adulto,2009,128,126,4,73574,0.89,264
+Cuidados Intensivos Adulto,2010,131,122,2,194528,0.69,465
+Cuidados Intensivos Adulto,2011,121,119,4,198172,0.68,468
+Cuidados Intensivos Adulto,2012,127,126,3,293806,0.64,253
+Cuidados Intensivos Adulto,2013,120,115,2,144074,0.72,153
+Cuidados Intensivos Adulto,2014,129,125,2,223880,0.82,354
+Cuidados Intensivos Adulto,2015,131,125,4,89764,0.84,174
+Cuidados Intensivos Adulto,2016,134,128,3,286257,0.73,197
+Cuidados Intensivos Adulto,2017,132,130,1,264323,0.81,434
+Cuidados Intensivos Adulto,2018,123,121,0,297940,0.9,237
+Cuidados Intensivos Adulto,2019,129,120,0,69963,0.63,168
+Cuidados Intensivos Adulto,2020,113,108,4,55569,0.72,334
+Cuidados Intensivos Adulto,2021,121,119,0,205286,0.65,194
+Cuidados Intensivos Adulto,2022,120,115,3,292023,0.86,380
+Cuidados Intensivos Adulto,2023,111,109,2,119724,0.97,160
+Cuidados Intensivos Adulto,2024,126,124,4,268116,0.73,269
+Cuidados Intensivos Adulto,2025,112,112,4,154680,0.74,145
+Maestría en Salud Pública,2005,65,57,1,191560,0.78,313
+Maestría en Salud Pública,2006,65,58,2,200334,0.74,436
+Maestría en Salud Pública,2007,53,53,0,260786,0.67,306
+Maestría en Salud Pública,2008,63,56,1,78699,0.74,315
+Maestría en Salud Pública,2009,49,40,2,292999,0.65,102
+Maestría en Salud Pública,2010,60,54,2,88638,0.61,373
+Maestría en Salud Pública,2011,50,48,2,216926,0.64,218
+Maestría en Salud Pública,2012,48,39,0,100448,0.68,225
+Maestría en Salud Pública,2013,54,46,0,184668,0.83,167
+Maestría en Salud Pública,2014,50,48,0,175036,0.78,327
+Maestría en Salud Pública,2015,54,49,1,62910,0.88,468
+Maestría en Salud Pública,2016,50,48,1,150776,0.73,279
+Maestría en Salud Pública,2017,39,32,2,67260,0.73,476
+Maestría en Salud Pública,2018,37,33,4,166421,0.74,211
+Maestría en Salud Pública,2019,38,31,0,194118,0.62,130
+Maestría en Salud Pública,2020,41,37,3,59111,0.64,421
+Maestría en Salud Pública,2021,52,49,0,162221,0.66,161
+Maestría en Salud Pública,2022,33,26,1,96514,0.92,232
+Maestría en Salud Pública,2023,35,26,3,141922,0.68,119
+Maestría en Salud Pública,2024,45,45,1,128477,0.71,392
+Maestría en Salud Pública,2025,38,35,4,297786,0.83,489
+Salud Materna Perinatal,2005,73,67,1,183291,0.68,267
+Salud Materna Perinatal,2006,70,67,0,182414,0.86,372
+Salud Materna Perinatal,2007,78,71,2,274861,0.64,168
+Salud Materna Perinatal,2008,82,81,4,189639,0.98,175
+Salud Materna Perinatal,2009,73,71,0,186487,0.87,159
+Salud Materna Perinatal,2010,79,71,4,171101,0.9,390
+Salud Materna Perinatal,2011,77,73,2,205002,0.84,161
+Salud Materna Perinatal,2012,77,69,4,264057,0.75,395
+Salud Materna Perinatal,2013,81,75,2,123340,0.71,122
+Salud Materna Perinatal,2014,89,89,0,117728,0.94,408
+Salud Materna Perinatal,2015,83,76,2,61302,0.64,233
+Salud Materna Perinatal,2016,78,72,2,74519,0.86,114
+Salud Materna Perinatal,2017,91,91,3,75053,0.94,256
+Salud Materna Perinatal,2018,83,75,0,94028,0.69,388
+Salud Materna Perinatal,2019,82,77,1,82265,0.79,429
+Salud Materna Perinatal,2020,79,74,4,204782,0.74,464
+Salud Materna Perinatal,2021,99,92,4,70103,0.66,146
+Salud Materna Perinatal,2022,84,83,2,197550,0.83,391
+Salud Materna Perinatal,2023,92,88,3,127834,0.96,459
+Salud Materna Perinatal,2024,87,82,1,126077,0.83,317
+Salud Materna Perinatal,2025,95,88,1,67368,0.7,203
+Maestría en Nutrición Clínica,2005,90,87,3,245716,0.95,427
+Maestría en Nutrición Clínica,2006,89,89,3,246382,0.83,150
+Maestría en Nutrición Clínica,2007,95,88,0,184869,0.95,356
+Maestría en Nutrición Clínica,2008,96,92,4,282793,0.92,281
+Maestría en Nutrición Clínica,2009,85,80,2,169719,0.83,408
+Maestría en Nutrición Clínica,2010,94,85,3,89224,0.6,390
+Maestría en Nutrición Clínica,2011,107,99,1,289690,0.95,490
+Maestría en Nutrición Clínica,2012,106,105,2,86368,0.82,463
+Maestría en Nutrición Clínica,2013,109,104,0,117526,0.66,443
+Maestría en Nutrición Clínica,2014,93,93,4,144270,0.71,253
+Maestría en Nutrición Clínica,2015,111,107,0,296726,0.97,460
+Maestría en Nutrición Clínica,2016,112,109,3,202638,0.98,148
+Maestría en Nutrición Clínica,2017,103,103,4,223021,0.88,478
+Maestría en Nutrición Clínica,2018,117,117,4,223532,0.78,118
+Maestría en Nutrición Clínica,2019,117,117,2,229374,0.8,212
+Maestría en Nutrición Clínica,2020,119,114,2,169614,0.64,363
+Maestría en Nutrición Clínica,2021,109,107,1,280857,0.94,261
+Maestría en Nutrición Clínica,2022,105,99,3,76399,0.87,448
+Maestría en Nutrición Clínica,2023,114,114,0,257606,0.7,354
+Maestría en Nutrición Clínica,2024,115,110,0,266302,0.82,150
+Maestría en Nutrición Clínica,2025,110,103,1,123506,0.69,177
+Maestría en Imagenología,2005,61,58,3,287732,0.65,497
+Maestría en Imagenología,2006,69,68,1,66032,0.68,246
+Maestría en Imagenología,2007,72,70,3,231532,0.76,101
+Maestría en Imagenología,2008,60,56,3,266586,0.7,485
+Maestría en Imagenología,2009,65,59,3,166243,0.84,355
+Maestría en Imagenología,2010,74,73,4,188155,0.68,441
+Maestría en Imagenología,2011,80,73,0,229357,0.79,314
+Maestría en Imagenología,2012,88,87,2,77856,0.7,139
+Maestría en Imagenología,2013,77,69,0,105029,0.85,103
+Maestría en Imagenología,2014,91,90,4,131994,0.91,227
+Maestría en Imagenología,2015,91,88,0,81653,0.63,264
+Maestría en Imagenología,2016,90,81,3,51622,0.64,441
+Maestría en Imagenología,2017,93,86,1,277595,0.84,408
+Maestría en Imagenología,2018,97,88,4,192736,0.76,289
+Maestría en Imagenología,2019,107,106,3,88709,0.88,406
+Maestría en Imagenología,2020,101,99,1,103276,0.75,395
+Maestría en Imagenología,2021,111,108,0,205834,0.71,326
+Maestría en Imagenología,2022,105,99,4,270471,0.68,135
+Maestría en Imagenología,2023,121,118,2,248370,0.92,436
+Maestría en Imagenología,2024,122,121,0,213993,0.78,172
+Maestría en Imagenología,2025,121,114,0,104912,0.79,203
