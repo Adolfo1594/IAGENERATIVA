@@ -77,11 +77,15 @@ def generar_prediccion(programa, años, tendencias, datos_resumen):
     """
 
     prompt = f"""
-Eres un **experto senior en analítica educativa, modelado estadístico, 
-predicción de demanda académica y planeación estratégica universitaria**, 
-con 20 años de experiencia asesorando instituciones de educación superior.
+Eres un **experto senior en estadística educativa, modelado de series de tiempo, 
+análisis laboral y planeación universitaria**, con 20 años de experiencia.
 
-Tu objetivo: elaborar una **proyección de demanda estudiantil realista y con base analítica**.
+Tu misión: generar una **predicción cuantitativa y estratégica** combinando:
+1) Los datos históricos reales proporcionados  
+2) Conocimiento general externo que tú sabes sobre tendencias educativas  
+Sin inventar cifras específicas no sustentadas.
+
+----------------------------------------------------
 
 ---
 
@@ -96,37 +100,61 @@ Tu objetivo: elaborar una **proyección de demanda estudiantil realista y con ba
 
 ---
 
-## 🌍 TENDENCIAS A CONSIDERAR
-El usuario indicó estas tendencias externas que pueden impactar la demanda:
-➡️ {tendencias}
+🌍 **TENDENCIAS EXTERNAS A CONSIDERAR**
+El usuario indicó:
 
----
+{tendencias if tendencias.strip() != "" else "No se proporcionaron tendencias adicionales."}
 
-## 🧠 INSTRUCCIONES DE ANÁLISIS
-Debes:
+Úsalas solo como ajustes cualitativos, nunca como sustituto de los datos reales.
+
+----------------------------------------------------
+🧠 **INSTRUCCIONES DEL ANÁLISIS**
 
 ### 1. Analizar los datos históricos
-- Identificar patrones, estacionalidades o quiebres.
-- Calcular crecimiento promedio.
-- Detectar anomalías significativas.
+- Tendencia general  
+- Crecimiento promedio anual (CAGR)  
+- Estacionalidad o patrones  
+- Ruido o variabilidad  
+- Outliers o puntos anómalos  
 
-### 2. Integrar el contexto externo
-- Relaciona las tendencias con el comportamiento del programa.
-- Explica su impacto en la demanda.
+### 2. Integrar tendencias externas
+Puedes usar conocimiento general sobre:
+- Tendencias globales de educación superior  
+- Comportamiento de matrícula en programas similares  
+- Cambios demográficos y tecnológicos  
+- Demanda laboral del área del programa  
+SIN inventar números externos exactos.
 
-### 3. Producir predicción cuantitativa
-- Proyecta demanda año por año.
-- Utiliza lógica coherente, estadística cualitativa y análisis contextual.
-- **Evita inventar números aleatorios.**
+Explica cómo afectan la proyección.
 
-### 4. Entregar una respuesta clara con estos bloques:
-1. **Tabla de proyección año → demanda estimada**  
-2. **Análisis detallado de la proyección**  
-3. **Conclusión ejecutiva**  
-4. **Recomendaciones estratégicas para la institución**  
+### 3. Producir la proyección numérica
+- Proyecta año por año  
+- Números coherentes basados en el historial  
+- Ajustes suaves inspirados en tendencias globales  
 
----
+### 4. Formato obligatorio de la respuesta
 
+#### 🔹 **1. Análisis estadístico del historial**
+Texto claro y técnico.
+
+#### 🔹 **2. Factores externos relevantes**
+Tendencias generales, sin cifras inventadas.
+
+#### 🔹 **3. Tabla de proyección (año → demanda esperada)**
+
+Ejemplo:
+Año | Demanda estimada  
+----|------------------  
+2025 | X  
+2026 | X  
+
+#### 🔹 **4. Supuestos del modelo**
+Justificación técnica del método usado.
+
+#### 🔹 **5. Conclusión ejecutiva**
+Clara, objetiva y accionable.
+
+----------------------------------------------------
 ## 📤 FORMATO FINAL
 Responde de manera ordenada, con buena estructura profesional.
 """
