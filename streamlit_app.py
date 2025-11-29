@@ -4,6 +4,15 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
+
+# ================================================================
+# INICIALIZACIÓN DE VARIABLES DE SESIÓN
+# ================================================================
+# Se usa para guardar la predicción después de generarla
+if "resultado_prediccion" not in st.session_state:
+    st.session_state.resultado_prediccion = None
+
+
 # ================================================================
 # CONFIGURACIÓN INICIAL
 # ================================================================
@@ -189,36 +198,34 @@ if st.button("🚀 Generar Predicción"):
 
 
 
-# =========================
-# SECCIÓN 3 — PREGUNTAS RELACIONADAS
-# =========================
-st.header("3. Pregúntale al asistente sobre los resultados")
+# ================================================================
+# 5. SECCIÓN DE PREGUNTAS ADICIONALES
+# ================================================================
+st.subheader("🧠 Haz preguntas sobre el análisis generado")
 
-# Solo habilitar preguntas si ya se generó una predicción
-if "prediccion" in st.session_state:
-
-    pregunta = st.text_input("Escribe tu pregunta relacionada con los resultados:")
-
-    if st.button("Responder pregunta") and pregunta.strip() != "":
-        contexto = st.session_state["prediccion"]
-
+if st.session_state.resultado_prediccion:
+    pregunta = st.text_input("Escribe tu pregunta:")
+    
+    if st.button("Responder pregunta"):
         prompt_pregunta = f"""
-Eres un analista educativo experto. El usuario tiene dudas sobre los resultados previos.
+Aquí está el análisis previo que generaste:
 
-Resultados generados:
-{contexto}
+------------------------------------------------
+{st.session_state.resultado_prediccion}
+------------------------------------------------
 
-La pregunta del usuario es:
-"{pregunta}"
+El usuario pregunta ahora:
 
-Responde de manera clara, precisa y justificada.
+❓ {pregunta}
+
+Por favor responde de forma clara, útil y consistente con el análisis original.
+Evita contradecir los datos previos.
 """
 
-        with st.spinner("Analizando pregunta..."):
-            respuesta = model.generate_content(prompt_pregunta)
+        model = genai.GenerativeModel("gemini-2.0-flash")
+        respuesta = model.generate_content(prompt_pregunta)
 
-        st.subheader("🧠 Respuesta del asistente")
+        st.write("### Respuesta del sistema:")
         st.write(respuesta.text)
-
 else:
-    st.info("Primero genera la predicción para poder hacer preguntas.")
+    st.info("Genera primero la predicción para activar esta sección.")
