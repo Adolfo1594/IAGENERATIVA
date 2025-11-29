@@ -15,11 +15,11 @@ if "resultado_prediccion" not in st.session_state:
 # ================================================================
 st.set_page_config(
     page_title="Predicción de Demanda Educativa con Gemini",
-    page_icon="📊",
+    page_icon="",
     layout="centered"
 )
 
-st.title("📊 Predicción de Demanda Educativa con Gemini 2.5")
+st.title(" Predicción de Demanda Educativa con Gemini 2.5")
 st.write("Sube tu dataset y genera proyecciones inteligentes basadas en datos reales y tendencias educativas.")
 
 # ================================================================
@@ -34,7 +34,7 @@ except:
 # ================================================================
 # 1. SUBIR ARCHIVO CSV
 # ================================================================
-st.subheader("📁 Cargar datos históricos")
+st.subheader("Cargar datos históricos")
 
 archivo = st.file_uploader("Sube el archivo CSV con los datos históricos", type=["csv"])
 
@@ -61,7 +61,7 @@ else:
 # ================================================================
 # 2. SELECCIÓN DEL USUARIO
 # ================================================================
-st.subheader("🎯 Configurar Predicción")
+st.subheader("Configurar Predicción")
 
 programa_usuario = st.selectbox("Selecciona el programa a proyectar:", programas)
 años = st.slider("¿Cuántos años deseas proyectar?", 1, 20, 5)
@@ -90,22 +90,22 @@ combinando:
 NO inventes datos externos exactos; usa lógica estadística, inferencia y análisis experto.
 
 ----------------------------------------------------
-📘 **PROGRAMA A ANALIZAR**
+**PROGRAMA A ANALIZAR**
 - Programa: {programa}
 - Años a proyectar: {años}
 
 ----------------------------------------------------
-📊 **DATOS HISTÓRICOS (RESUMEN)**
+**DATOS HISTÓRICOS (RESUMEN)**
 {datos_resumen}
 
 ----------------------------------------------------
-🌍 **TENDENCIAS EXTERNAS INDICADAS POR EL USUARIO**
+**TENDENCIAS EXTERNAS INDICADAS POR EL USUARIO**
 {tendencias if tendencias.strip() else "No se proporcionaron tendencias adicionales."}
 
 Úsalas como moduladores cualitativos, no como cifras exactas.
 
 ----------------------------------------------------
-🧠 **INSTRUCCIONES DEL ANÁLISIS**
+**INSTRUCCIONES DEL ANÁLISIS**
 
 ### 1. Analiza los datos históricos:
 - Identifica tendencia general
@@ -153,7 +153,7 @@ Responde de manera profesional, estructurada y clara.
 # ================================================================
 # 4. BOTÓN PARA GENERAR PREDICCIÓN
 # ================================================================
-if st.button("🚀 Generar Predicción"):
+if st.button("Generar Predicción"):
 
     df_filtrado = df[df[nombre_col_programa] == programa_usuario]
     resumen = df_filtrado.head(20).to_string(index=False)
@@ -171,7 +171,7 @@ if st.button("🚀 Generar Predicción"):
 # ================================================================
 # 5. SECCIÓN DE PREGUNTAS ADICIONALES
 # ================================================================
-st.subheader("🧠 Haz preguntas sobre el análisis generado")
+st.subheader("Haz preguntas sobre el análisis generado")
 
 if st.session_state.resultado_prediccion:
     pregunta = st.text_input("Escribe tu pregunta:")
