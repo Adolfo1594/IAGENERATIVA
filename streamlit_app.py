@@ -186,3 +186,39 @@ if st.button("🚀 Generar Predicción"):
     st.write(resultado)
 
     st.success("Predicción generada correctamente.")
+
+
+
+# =========================
+# SECCIÓN 3 — PREGUNTAS RELACIONADAS
+# =========================
+st.header("3. Pregúntale al asistente sobre los resultados")
+
+# Solo habilitar preguntas si ya se generó una predicción
+if "prediccion" in st.session_state:
+
+    pregunta = st.text_input("Escribe tu pregunta relacionada con los resultados:")
+
+    if st.button("Responder pregunta") and pregunta.strip() != "":
+        contexto = st.session_state["prediccion"]
+
+        prompt_pregunta = f"""
+Eres un analista educativo experto. El usuario tiene dudas sobre los resultados previos.
+
+Resultados generados:
+{contexto}
+
+La pregunta del usuario es:
+"{pregunta}"
+
+Responde de manera clara, precisa y justificada.
+"""
+
+        with st.spinner("Analizando pregunta..."):
+            respuesta = model.generate_content(prompt_pregunta)
+
+        st.subheader("🧠 Respuesta del asistente")
+        st.write(respuesta.text)
+
+else:
+    st.info("Primero genera la predicción para poder hacer preguntas.")
