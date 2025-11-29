@@ -6,9 +6,13 @@ import os
 # ================================================================
 # INICIALIZACIÓN DE VARIABLES DE SESIÓN
 # ================================================================
-# Se usa para guardar la predicción después de generarla
+# Guarda el análisis generado
 if "resultado_prediccion" not in st.session_state:
     st.session_state.resultado_prediccion = None
+
+# Guarda historial de preguntas
+if "historial_preguntas" not in st.session_state:
+    st.session_state.historial_preguntas = []
 
 # ================================================================
 # CONFIGURACIÓN INICIAL DE LA APP
@@ -19,11 +23,11 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title(" Predicción de Demanda Educativa con Gemini 2.5")
+st.title("Predicción de Demanda Educativa con Gemini ")
 st.write("Sube tu dataset y genera proyecciones inteligentes basadas en datos reales y tendencias educativas.")
 
 # ================================================================
-# CONFIGURACIÓN DE GEMINI (USANDO SECRETS)
+# CONFIGURACIÓN DE GEMINI
 # ================================================================
 try:
     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
@@ -48,7 +52,6 @@ if archivo:
     nombre_col_anio = "anio"
     nombre_col_demanda = "demanda"
 
-    # Validación
     if nombre_col_programa not in df.columns:
         st.error("El CSV debe contener la columna 'programa'.")
         st.stop()
@@ -61,13 +64,13 @@ else:
 # ================================================================
 # 2. SELECCIÓN DEL USUARIO
 # ================================================================
-st.subheader("Configurar Predicción")
+st.subheader("⚙️ Configurar Predicción")
 
 programa_usuario = st.selectbox("Selecciona el programa a proyectar:", programas)
 años = st.slider("¿Cuántos años deseas proyectar?", 1, 20, 5)
 
 tendencias_usuario = st.text_area(
-    "Describe tendencias globales, sociales, tecnológicas o locales que puedan impactar la demanda educativa:",
+    "Describe tendencias que puedan impactar la demanda educativa:",
     placeholder="Ej. crecimiento de IA, digitalización, nuevas regulaciones, cambios demográficos…"
 )
 
@@ -76,75 +79,53 @@ tendencias_usuario = st.text_area(
 # ================================================================
 def generar_prediccion(programa, años, tendencias, datos_resumen):
     prompt = f"""
-Eres un **especialista senior en estadística educativa, proyecciones de matrícula,
-planeación universitaria y análisis laboral**, con más de 20 años de experiencia 
-asesorando instituciones de educación superior.
+Eres un **experto senior en estadística educativa, modelado de series de tiempo, 
+análisis laboral y planeación universitaria**, con 20 años de experiencia.
 
-Tu tarea es generar una **proyección de demanda educativa precisa, objetiva y basada en datos**, 
-combinando:
-
-1) Datos históricos proporcionados  
-2) Conocimiento general de tendencias globales del sector educativo  
-3) Patrones de comportamiento típicos en programas académicos similares  
-
-NO inventes datos externos exactos; usa lógica estadística, inferencia y análisis experto.
+Tu misión: generar una **predicción cuantitativa y estratégica** combinando:
+1) Los datos históricos reales proporcionados  
+2) Conocimiento general externo que tú sabes sobre tendencias educativas  
+Sin inventar cifras específicas no sustentadas.
 
 ----------------------------------------------------
-**PROGRAMA A ANALIZAR**
-- Programa: {programa}
-- Años a proyectar: {años}
+----------------------------------------------------
+PROGRAMA
+- {programa}
+AÑOS A PROYECTAR
+- {años}
 
 ----------------------------------------------------
-**DATOS HISTÓRICOS (RESUMEN)**
+DATOS HISTÓRICOS (RESUMEN)
 {datos_resumen}
 
 ----------------------------------------------------
-**TENDENCIAS EXTERNAS INDICADAS POR EL USUARIO**
-{tendencias if tendencias.strip() else "No se proporcionaron tendencias adicionales."}
-
-Úsalas como moduladores cualitativos, no como cifras exactas.
+TENDENCIAS EXTERNAS
+{tendencias if tendencias.strip() else "No se indicaron tendencias adicionales"}
 
 ----------------------------------------------------
-**INSTRUCCIONES DEL ANÁLISIS**
+INSTRUCCIONES
 
-### 1. Analiza los datos históricos:
-- Identifica tendencia general
-- Calcula crecimiento promedio anual
-- Revisa variaciones o quiebres
-- Reconoce estacionalidad o patrones
-- Detecta outliers o anomalías
+1. Analiza los datos:
+- tendencia general
+- crecimiento promedio anual
+- cambios bruscos
+- anomalías
 
-### 2. Integra conocimiento experto externo:
-- Tendencias globales de educación superior
-- Demanda laboral del área del programa
-- Comportamientos típicos de matrícula
-- Cambios demográficos o tecnológicos
+2. Integra conocimiento general del sector educativo.
 
-### 3. Genera la proyección:
-- Año por año
-- Basada en crecimiento histórico + ajuste cualitativo por tendencias
-- Evita saltos bruscos o incoherentes
-
-### 4. El formato de respuesta DEBE incluir:
-
-#### 🔹 1. Análisis estadístico del historial
-Explicación clara basada en datos reales.
-
-#### 🔹 2. Factores externos relevantes (sin cifras inventadas)
-
-#### 🔹 3. **Tabla de proyección**
+3. Genera una proyección por año:
 Año | Demanda Estimada  
 ----|------------------
 
-#### 🔹 4. Supuestos del modelo
-Qué se asumió y por qué.
+4. Incluye:
+- Análisis estadístico
+- Factores externos
+- Tabla de proyección
+- Supuestos del modelo
+- Conclusión ejecutiva
 
-#### 🔹 5. Conclusión ejecutiva
-Recomendaciones concretas para la institución.
-
-----------------------------------------------------
-Responde de manera profesional, estructurada y clara.
-    """
+Responde de manera estructurada, profesional y clara.
+"""
 
     model = genai.GenerativeModel("gemini-2.0-flash")
     respuesta = model.generate_content(prompt)
@@ -161,41 +142,59 @@ if st.button("Generar Predicción"):
     with st.spinner("Generando análisis con Gemini..."):
         resultado = generar_prediccion(programa_usuario, años, tendencias_usuario, resumen)
 
-    # Guardar en session_state
+    # Guardar análisis en sesión
     st.session_state.resultado_prediccion = resultado
+    st.session_state.historial_preguntas = []  # Resetear historial si se genera un nuevo análisis
 
-    st.subheader("📈 Resultado de la Predicción")
-    st.write(st.session_state.resultado_prediccion)
     st.success("Predicción generada correctamente.")
 
 # ================================================================
-# 5. SECCIÓN DE PREGUNTAS ADICIONALES
+# 5. MOSTRAR ANÁLISIS SI YA EXISTE
+# ================================================================
+if st.session_state.resultado_prediccion:
+    st.subheader("Resultado de la Predicción")
+    st.write(st.session_state.resultado_prediccion)
+
+# ================================================================
+# 6. SECCIÓN DE PREGUNTAS ADICIONALES
 # ================================================================
 st.subheader("Haz preguntas sobre el análisis generado")
 
 if st.session_state.resultado_prediccion:
     pregunta = st.text_input("Escribe tu pregunta:")
-    
+
     if st.button("Responder pregunta"):
-        prompt_pregunta = f"""
-Aquí está el análisis previo que generaste:
+        if pregunta.strip() == "":
+            st.warning("Escribe una pregunta antes de continuar.")
+        else:
+            prompt_pregunta = f"""
+Aquí tienes el análisis generado previamente:
 
 ------------------------------------------------
 {st.session_state.resultado_prediccion}
 ------------------------------------------------
 
-El usuario pregunta ahora:
+PREGUNTA DEL USUARIO:
+{pregunta}
 
-❓ {pregunta}
-
-Por favor responde de forma clara, útil y consistente con el análisis original.
-Evita contradecir los datos previos.
+Responde de forma clara, útil y consistente con el análisis previo.
 """
 
-        model = genai.GenerativeModel("gemini-2.0-flash")
-        respuesta = model.generate_content(prompt_pregunta)
+            model = genai.GenerativeModel("gemini-2.0-flash")
+            respuesta = model.generate_content(prompt_pregunta).text
 
-        st.write("### Respuesta del sistema:")
-        st.write(respuesta.text)
-else:
-    st.info("Genera primero la predicción para activar esta sección.")
+            # Guardar en historial
+            st.session_state.historial_preguntas.append((pregunta, respuesta))
+
+# ================================================================
+# 7. MOSTRAR HISTORIAL DE PREGUNTAS
+# ================================================================
+if st.session_state.historial_preguntas:
+    st.subheader("Preguntas y respuestas adicionales")
+
+    for i, (p, r) in enumerate(st.session_state.historial_preguntas):
+        st.write(f"### ❓ Pregunta {i+1}")
+        st.write(p)
+        st.write("**Respuesta:**")
+        st.write(r)
+        st.write("---")
