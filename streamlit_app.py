@@ -77,29 +77,15 @@ def generar_prediccion(programa, años, tendencias, datos_resumen):
     """
 
     prompt = f"""
-**"Actúa como un experto investigador senior en Analítica Predictiva Educativa, con 25 años de experiencia en:
+Eres un **experto senior en estadística educativa, modelado de series de tiempo, 
+análisis laboral y planeación universitaria**, con 20 años de experiencia.
 
-modelado estadístico avanzado para instituciones de educación superior, proyección de matrícula, análisis de tendencias demográficas, identificación de riesgos de oferta–demanda, inteligencia institucional,
+Tu misión: generar una **predicción cuantitativa y estratégica** combinando:
+1) Los datos históricos reales proporcionados  
+2) Conocimiento general externo que tú sabes sobre tendencias educativas  
+Sin inventar cifras específicas no sustentadas.
 
-planeación estratégica universitaria basada en datos.
-
-Tu responsabilidad es elaborar proyecciones de demanda educativa altamente precisas, justificadas y basadas en:
-
-1. Los datos históricos que te proporcionaré (CSV cargado por el usuario en Streamlit).
-
-— Estos datos son la base primaria del pronóstico.
-— Debes analizarlos rigurosamente antes de generar cualquier predicción.
-— Identifica patrones, tendencias, estacionalidades, tasas de crecimiento y anomalías.
-
-2. Conocimiento previo del modelo (Gemini).
-
-Puedes complementar con:
-tendencias nacionales e internacionales de educación superior, factores de mercado laboral, comportamiento histórico de la matrícula en programas similares, fluctuaciones demográficas conocidas, variables socioeconómicas que suelen influir en la demanda.
-
-3. Buenas prácticas de analítica educativa.
-
-Debes aplicar enfoques como:
-modelos de series de tiempo, tasas compuestas de crecimiento anual (TCAC/CAGR), análisis comparativo por áreas del conocimiento, proyecciones conservadoras, moderadas y optimistas.
+----------------------------------------------------
 
 ----------------------------------------------------
 
