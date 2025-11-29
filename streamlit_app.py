@@ -10,11 +10,11 @@ import os
 
 st.set_page_config(
     page_title="Predicción de Demanda Educativa con Gemini",
-    page_icon="📊",
+    page_icon="",
     layout="centered"
 )
 
-st.title("📊 Predicción de Demanda Educativa con Gemini 2.5")
+st.title(" Predicción de Demanda Educativa con Gemini 2.5")
 st.write("Sube tu dataset y genera proyecciones inteligentes.")
 
 
@@ -57,7 +57,7 @@ else:
 # 3. SELECCIÓN DEL USUARIO
 # ================================================================
 
-st.subheader("🎯 Configurar Predicción")
+st.subheader("Configurar Predicción")
 
 programa_usuario = st.selectbox("Selecciona el programa a proyectar:", programas)
 años = st.slider("¿Cuántos años deseas proyectar?", 1, 20, 5)
@@ -89,13 +89,13 @@ Sin inventar cifras específicas no sustentadas.
 
 ---
 
-## 📘 PROGRAMA A ANALIZAR
+## PROGRAMA A ANALIZAR
 - Programa académico: **{programa}**
 - Años a proyectar: **{años}**
 
 ---
 
-## 📊 DATOS HISTÓRICOS DISPONIBLES
+## DATOS HISTÓRICOS DISPONIBLES
 {datos_resumen}
 
 ---
@@ -108,7 +108,7 @@ El usuario indicó:
 Úsalas solo como ajustes cualitativos, nunca como sustituto de los datos reales.
 
 ----------------------------------------------------
-🧠 **INSTRUCCIONES DEL ANÁLISIS**
+**INSTRUCCIONES DEL ANÁLISIS**
 
 ### 1. Analizar los datos históricos
 - Tendencia general  
@@ -155,7 +155,7 @@ Justificación técnica del método usado.
 Clara, objetiva y accionable.
 
 ----------------------------------------------------
-## 📤 FORMATO FINAL
+## FORMATO FINAL
 Responde de manera ordenada, con buena estructura profesional.
 """
 
